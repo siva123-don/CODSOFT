@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-teal-500">
+
+    <div class="bg-white rounded-xl shadow-2xl w-full max-w-xs p-6">
+        <input id="display" type="text" readonly class="w-full text-4xl p-4 bg-gray-100 rounded-lg border border-gray-300 text-right text-gray-800 mb-6">
+
+        <div class="grid grid-cols-4 gap-4">
+            <button onclick="appendToDisplay('7')" class="button">7</button>
+            <button onclick="appendToDisplay('8')" class="button">8</button>
+            <button onclick="appendToDisplay('9')" class="button">9</button>
+            <button onclick="appendToDisplay('/')" class="button bg-blue-500 text-white">/</button>
+
+            <button onclick="appendToDisplay('4')" class="button">4</button>
+            <button onclick="appendToDisplay('5')" class="button">5</button>
+            <button onclick="appendToDisplay('6')" class="button">6</button>
+            <button onclick="appendToDisplay('*')" class="button bg-blue-500 text-white">*</button>
+
+            <button onclick="appendToDisplay('1')" class="button">1</button>
+            <button onclick="appendToDisplay('2')" class="button">2</button>
+            <button onclick="appendToDisplay('3')" class="button">3</button>
+            <button onclick="appendToDisplay('-')" class="button bg-blue-500 text-white">-</button>
+
+            <button onclick="appendToDisplay('0')" class="button col-span-2">0</button>
+            <button onclick="appendToDisplay('.')" class="button">.</button>
+            <button onclick="appendToDisplay('+')" class="button bg-blue-500 text-white">+</button>
+
+            <button onclick="calculateResult()" class="col-span-4 button bg-teal-500 text-white">=</button>
+        </div>
+    </div>
+
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculateResult() {
+            const display = document.getElementById('display');
+            try {
+                display.value = eval(display.value);
+            } catch {
+                display.value = 'Error';
+            }
+        }
+    </script>
+
+    <style>
+        .button {
+            @apply bg-gray-200 text-2xl font-bold py-3 px-4 rounded-lg transition-all hover:bg-gray-300 focus:outline-none;
+        }
+
+        .button:active {
+            @apply bg-gray-400;
+        }
+    </style>
+
+</body>
+</html>
