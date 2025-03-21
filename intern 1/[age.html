@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivvig's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0.95);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .scale-up {
+            animation: scaleUp 0.5s ease-out;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-600 text-white">
+
+    <header class="py-12 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-center fade-in">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-5xl font-extrabold text-white">Sivvig</h1>
+            <p class="mt-4 text-2xl">Web Developer | Designer | Programmer</p>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 bg-white text-gray-800 scale-up">
+        <div class="max-w-5xl mx-auto text-center px-4">
+            <img src="https://via.placeholder.com/150" alt="Sivvig" class="mx-auto rounded-full mb-6 shadow-xl w-40 h-40">
+            <h2 class="text-4xl font-semibold mb-4 text-gray-800">About Me</h2>
+            <p class="text-xl leading-relaxed max-w-3xl mx-auto">Hi! I'm Sivvig, a passionate web developer with 5+ years of experience creating stunning websites and web applications. I specialize in HTML, CSS, JavaScript, and React. I'm always looking to explore new technologies and build innovative digital experiences!</p>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 bg-gradient-to-r from-purple-500 to-indigo-500 text-white scale-up">
+        <div class="max-w-5xl mx-auto text-center px-4">
+            <h2 class="text-4xl font-semibold mb-8">My Skills</h2>
+            <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <li class="bg-purple-600 p-6 rounded-lg shadow-lg hover:bg-purple-700 transition duration-300 ease-in-out transform hover:scale-105">
+                    <p class="text-xl">HTML & CSS</p>
+                </li>
+                <li class="bg-blue-600 p-6 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">
+                    <p class="text-xl">JavaScript</p>
+                </li>
+                <li class="bg-green-600 p-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300 ease-in-out transform hover:scale-105">
+                    <p class="text-xl">React.js</p>
+                </li>
+                <li class="bg-red-600 p-6 rounded-lg shadow-lg hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-105">
+                    <p class="text-xl">Node.js</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 bg-white text-gray-800 scale-up">
+        <div class="max-w-5xl mx-auto text-center px-4">
+            <h2 class="text-4xl font-semibold mb-8">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold">Portfolio Website</h3>
+                    <p class="mt-2">This is a personal portfolio website where I showcase my skills, projects, and resume. It is built using HTML, CSS, JavaScript, and Tailwind CSS for styling. The website features a clean, modern design, with a fully responsive layout that works on mobile and desktop devices. The project helped me explore various web development techniques, including responsive design, animations, and user interactions.</p>
+                    <img src="https://via.placeholder.com/300x200" alt="Project 1" class="mt-4 w-full h-48 object-cover rounded-lg">
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold">E-commerce Website</h3>
+                    <p class="mt-2">An e-commerce website where users can browse and purchase products. Built using React.js for dynamic content rendering and Node.js for the backend. The site features a shopping cart, user authentication, and payment integration.</p>
+                    <img src="https://via.placeholder.com/300x200" alt="Project 2" class="mt-4 w-full h-48 object-cover rounded-lg">
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold">Weather App</h3>
+                    <p class="mt-2">A weather application that provides real-time weather data for any city worldwide. Built with React.js and utilizes the OpenWeatherMap API to fetch weather data. The app features dynamic updates based on the user's input and a clean, responsive design.</p>
+                    <img src="https://via.placeholder.com/300x200" alt="Project 3" class="mt-4 w-full h-48 object-cover rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="py-16 bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-center scale-up">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-4xl font-semibold mb-8">Resume</h2>
+            <a href="resume.pdf" download class="bg-yellow-500 text-gray-800 py-3 px-8 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 hover:bg-yellow-600">Download Resume</a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white text-gray-800 scale-up">
+        <div class="max-w-5xl mx-auto text-center px-4">
+            <h2 class="text-4xl font-semibold mb-8">Contact Me</h2>
+            <p class="text-xl">Email: <a href="mailto:sivvig@example.com" class="text-blue-500">sivvig@example.com</a></p>
+            <p class="text-xl">Phone: <span class="text-blue-500">+1234567890</span></p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>&copy; 2025 Sivvig. All rights reserved.</p>
+    </footer>
+</body>
+</html>
